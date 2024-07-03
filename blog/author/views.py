@@ -13,7 +13,7 @@ class Register(APIView):
     User registration endpoint.
     """
 
-    permission_classes = [AllowAny]  # Herhangi bir kullanıcı kaydı yapabilir
+    permission_classes = [AllowAny]  # allow any user can register
 
     def post(self, request, format=None):
         serializer = AuthorSerializer(data=request.data)
