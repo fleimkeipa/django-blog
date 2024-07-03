@@ -1,5 +1,21 @@
 # Blog
 
+This documentation describes all endpoints offered by the API of a blog site at 127.0.0.1:8000 and the use of these endpoints. HTTP methods, body structures, responses and, when necessary, query parameters are specified for each endpoint.
+
+## Endpoints
+
+```json
+api/register
+api/login
+api/categories
+api/categories/{category_id}
+api/posts
+api/posts/{post_id}
+api/posts/{post_id}/comments
+api/comments
+api/comments/{post_id}
+```
+
 ## Auth
 
 ### Register
