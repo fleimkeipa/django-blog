@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "44e1ac4a-b300-43ae-8af3-4d461f211a60",
-		"name": "40Ayak",
+		"name": "django-blog",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "15229728",
 		"_collection_link": "https://speeding-flare-686224.postman.co/workspace/kondukto~ffbe276d-6a79-49e9-94dd-ac192300bc7f/collection/15229728-44e1ac4a-b300-43ae-8af3-4d461f211a60?action=share&source=collection_link&creator=15229728"
