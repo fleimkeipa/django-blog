@@ -3,8 +3,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
-from django.contrib.auth.models import User
-from blog.serializers import AuthorSerializer
+from blog.author.serializers import AuthorSerializer
 from rest_framework.permissions import AllowAny
 
 

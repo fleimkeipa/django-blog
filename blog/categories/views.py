@@ -2,7 +2,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from blog.models import Category
-from blog.serializers import CategorySerializer
+from blog.categories.serializers import CategorySerializer
 
 
 @api_view(["GET", "POST"])

@@ -4,7 +4,8 @@ from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination
 from blog.models import Post, Comment
 from blog.permissions import PostPermissions
-from blog.serializers import PostSerializer, CommentSerializer
+from blog.posts.serializers import PostSerializer
+from blog.comments.serializers import CommentSerializer
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 
@@ -41,7 +42,9 @@ class PostList(generics.ListCreateAPIView):
         return paginator.get_paginated_response(serializer.data)
 
     def create(self, request):
-        serializer = self.get_serializer(data=request.data, context={'request': request})
+        serializer = self.get_serializer(
+            data=request.data, context={"request": request}
+        )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -106,7 +109,9 @@ class PostComments(APIView):
 
     def post(self, request, post_id, format=None):
         post = self.get_object(post_id)
-        serializer = self.serializer_class(data=request.data, context={'request': request})
+        serializer = self.serializer_class(
+            data=request.data, context={"request": request}
+        )
         if serializer.is_valid():
             serializer.save(post=post, author=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
