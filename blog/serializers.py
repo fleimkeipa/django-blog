@@ -49,7 +49,7 @@ class AuthorSerializer(serializers.ModelSerializer):
     posts = serializers.HyperlinkedRelatedField(
         many=True,
         read_only=True,
-        view_name="author-detail",
+        view_name="post-detail",
     )
 
     class Meta:

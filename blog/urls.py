@@ -17,7 +17,7 @@ urlpatterns = [
     path("comments/<int:pk>", comment_views.CommentDetail.as_view(),name="comment-detail"),
     
     path("authors", author_views.AuthorList.as_view(),name="author-list"),
-    path("authors/<int:id>", author_views.AuthorDetail.as_view(), name="author-detail"),
+    path("authors/<int:pk>", author_views.AuthorDetail.as_view(), name="author-detail"),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
