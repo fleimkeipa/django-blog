@@ -2,6 +2,11 @@
 
 This documentation describes all endpoints offered by the API of a blog site at 127.0.0.1:8000 and the use of these endpoints. HTTP methods, body structures, responses and, when necessary, query parameters are specified for each endpoint.
 
+## Installation
+
+Clone project on your local and run this for install packages
+`pip install -r requirements.txt`
+
 ## Endpoints
 
 ```json

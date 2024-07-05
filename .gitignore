@@ -2,13 +2,12 @@
 
 db.sqlite3
 
-/Users/ademsahin/Desktop/py/django-blog/blog/__pycache__
-blog/__pycache__
-blog/__pycache__/
-blog/__pycache__/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+
+# virtual env
+blogenv
 
 # C extensions
 *.so
