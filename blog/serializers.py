@@ -30,7 +30,12 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = "__all__"
-        read_only_fields = ["id", "created_at", "updated_at"]
+        read_only_fields = ["id", "created_at", "updated_at", "author"]
+
+    def create(self, validated_data):
+        # add user in validated data on request context
+        validated_data["author"] = self.context["request"].user
+        return super().create(validated_data)
 
     def validate_title(self, value):
         if len(value) < 3:
