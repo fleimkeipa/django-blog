@@ -4,8 +4,26 @@ This documentation describes all endpoints offered by the API of a blog site at 
 
 ## Installation
 
-Clone project on your local and run this for install packages
-`pip install -r requirements.txt`
+Clone project on your local
+Create new local environment file
+
+```sh
+python -m venv env
+source env/bin/activate  # Unix/macOS
+# env\Scripts\activate  # Windows
+```
+
+Run this for install packages
+
+```sh
+pip install -r requirements.txt
+```
+
+Migrate db
+
+```sh
+python manage.py migrate
+```
 
 ## Endpoints
 
