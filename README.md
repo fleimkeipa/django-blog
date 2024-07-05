@@ -146,7 +146,6 @@ api/comments/{post_id}
 {
     "title": "title",
     "content": "content",
-    "author": 1,
     "categories": [
         1
     ]
