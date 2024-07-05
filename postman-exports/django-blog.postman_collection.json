@@ -147,7 +147,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"author\": 1,\n    \"post\": 2,\n    \"content\": \"aaa\"\n}",
+							"raw": "{\n  \"content\": \"aaa\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -231,7 +231,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"3aa\",\n    \"content\": \"ww\",\n    \"author\": 2,\n    \"categories\": [\n        3\n    ]\n}",
+							"raw": "{\n    \"title\": \"3aa\",\n    \"content\": \"ww\",\n       \"categories\": [\n        3\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"

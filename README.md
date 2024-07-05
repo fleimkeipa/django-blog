@@ -215,14 +215,12 @@ api/comments/{post_id}
 
 ### Create Comment
 
-- Endpoint: `127.0.0.1:8000/api/posts/1/comments`
+- Endpoint: `127.0.0.1:8000/api/posts/{post_id}/comments`
 - Method: `POST`
 - Body:
 
 ```json
 {
-    "author": 1,
-    "post": 1,
     "content": "content"
 }
 ```
@@ -239,7 +237,7 @@ api/comments/{post_id}
 
 ### Get Posts Comments
 
-- Endpoint: `127.0.0.1:8000/api/posts/1/comments`
+- Endpoint: `127.0.0.1:8000/api/posts/{post_id}/comments`
 - Method: `GET`
 - Pagination key: `page:1`
 - Response:
@@ -263,7 +261,7 @@ api/comments/{post_id}
 
 ### Retrieve Comment
 
-- Endpoint: `127.0.0.1:8000/api/posts/1/comments`
+- Endpoint: `127.0.0.1:8000/api/posts/{post_id}/comments`
 - Method: `GET`
 - Response:
 

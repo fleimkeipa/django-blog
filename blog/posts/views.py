@@ -85,6 +85,7 @@ class PostComments(APIView):
     """
 
     permission_classes = [PostPermissions]
+    serializer_class = CommentSerializer
 
     def get_object(self, post_id):
         obj = get_object_or_404(Post, id=post_id)
@@ -105,7 +106,7 @@ class PostComments(APIView):
 
     def post(self, request, post_id, format=None):
         post = self.get_object(post_id)
-        serializer = CommentSerializer(data=request.data)
+        serializer = self.serializer_class(data=request.data, context={'request': request})
         if serializer.is_valid():
             serializer.save(post=post, author=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
