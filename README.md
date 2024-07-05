@@ -5,6 +5,11 @@ This documentation describes all endpoints offered by the API of a blog site at 
 ## Installation
 
 Clone project on your local
+
+```sh
+git clone https://github.com/fleimkeipa/django-blog.git
+```
+
 Create new local environment file
 
 ```sh
