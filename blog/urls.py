@@ -6,8 +6,8 @@ from blog.comments import views as comment_views
 from blog.author import views as author_views
 
 urlpatterns = [
-    path("categories", category_views.category_list,name="category-list"),
-    path("categories/<int:id>", category_views.category_detail, name="category-detail"),
+    path("categories", category_views.CategoryList.as_view,name="category-list"),
+    path("categories/<int:id>", category_views.CategoryDetail.as_view, name="category-detail"),
     
     path("posts", post_views.PostList.as_view(),name="post-list"),
     path("posts/<int:pk>", post_views.PostDetail.as_view(), name="post-detail"),
